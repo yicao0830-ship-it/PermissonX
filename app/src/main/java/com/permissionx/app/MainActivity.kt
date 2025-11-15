@@ -15,7 +15,8 @@ class MainActivity:AppCompatActivity(){
         setContentView(R.layout.activity_main)
         makeCallBtn.setOnClickListener {
             PermissionX.request(this,
-                Manifest.permission.CALL_PHONE){ allGranted, deniedList->
+                Manifest.permission.CALL_PHONE
+            ){ allGranted, deniedList->
                 if(allGranted){
                     call()
                 } else {
